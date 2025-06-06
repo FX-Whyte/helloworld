@@ -1014,3 +1014,38 @@ h1, h2, h3, h4, h5, h6, p {
     left: 0;
     width: 100%;
 }
+
+/* Responsive for smaller screens */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+    .welcome-section,
+    .about-section,
+    .services-section,
+    .portfolio-section,
+    .contact-section,
+    .faq-section,
+    .testimonials-section {
+        padding: 12px 4px;
+        margin: 16px auto 0 auto;
+        max-width: 98vw;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    .portfolio-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .service-card,
+    .portfolio-item,
+    .testimonial-card {
+        min-width: 0;
+        width: 100%;
+        max-width: 98vw;
+    }
+}
