@@ -1100,8 +1100,12 @@ h1, h2, h3, h4, h5, h6, p {
         margin: 0 !important;
         background: transparent !important;
         box-shadow: none !important;
+        overflow-x: auto !important;      /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+        max-width: 80vw !important;       /* Prevents links from overflowing the screen */
     }
     .list li {
+        flex: 0 0 auto !important;        /* Prevent shrinking */
         margin: 0 2px !important;
     }
     .list li a {
