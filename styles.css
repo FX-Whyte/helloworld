@@ -1094,25 +1094,26 @@ h1, h2, h3, h4, h5, h6, p {
     .list {
         display: flex !important;
         flex-direction: row !important;
-        gap: 8px !important;
-        width: auto !important;
+        flex-wrap: wrap !important;      /* Allow links to wrap to next line */
+        gap: 4px !important;
+        width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
         background: transparent !important;
         box-shadow: none !important;
-        overflow-x: auto !important;      /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
-        max-width: 80vw !important;       /* Prevents links from overflowing the screen */
+        overflow-x: visible !important;  /* No horizontal scroll */
+        max-width: 100vw !important;
+        justify-content: center !important;
     }
     .list li {
-        flex: 0 0 auto !important;        /* Prevent shrinking */
-        margin: 0 2px !important;
+        flex: 0 1 auto !important;       /* Allow shrinking */
+        margin: 0 1px !important;
     }
     .list li a {
-        font-size: 13px !important;
-        padding: 8px 6px !important;
+        font-size: 12px !important;
+        padding: 6px 4px !important;
         background: transparent !important;
-        color: rgba(7,240,209,1) !important; /* Initial color */
+        color: rgba(7,240,209,1) !important;
         border-radius: 4px !important;
         transition: background 0.15s, color 0.15s !important;
     }
