@@ -1188,7 +1188,7 @@ h1, h2, h3, h4, h5, h6, p {
         font-size: 0.95em !important;
         color: #888 !important;
         text-align: center !important;
-        background: rgba(255,255,255,0.7) !important; /* semi-transparent */
+        background: transparent !important; 
         z-index: 2000 !important;
         box-shadow: 0 -2px 8px rgba(7,240,209,0.08);
     }
