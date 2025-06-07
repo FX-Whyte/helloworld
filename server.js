@@ -1,3 +1,5 @@
+console.log('Starting server...');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -69,4 +71,12 @@ app.post('/api/contact', async (req, res) => {
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+// Error handlers (keep these at the very bottom)
+process.on('uncaughtException', err => {
+  console.error('Uncaught Exception:', err);
+});
+process.on('unhandledRejection', err => {
+  console.error('Unhandled Rejection:', err);
 });
